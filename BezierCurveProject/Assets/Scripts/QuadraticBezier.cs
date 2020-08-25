@@ -10,12 +10,14 @@ public class QuadraticBezier : MonoBehaviour
     
     private LineRenderer lineRenderer;
     private float time = 0f;
-    private float limit = 1f; 
-    
+    private float limit = 5f;
+    private float magnification;
+
     // Start is called before the first frame update
     void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        magnification = 1f / limit;
     }
     
     void FixedUpdate()
@@ -28,7 +30,7 @@ public class QuadraticBezier : MonoBehaviour
             lineRenderer.SetPosition(i,Points[i].position);
         }
 
-        BezierPoint.position = Bezier(time, Points, QPoints);
+        BezierPoint.position = Bezier(time * magnification, Points, QPoints);
     }
 
     private Vector3 Bezier(float t, Transform[] points, Transform[] qPoints)

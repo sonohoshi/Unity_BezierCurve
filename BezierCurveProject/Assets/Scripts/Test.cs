@@ -19,7 +19,7 @@ public class Test : MonoBehaviour
     void FixedUpdate()
     {
         sum += Time.deltaTime;
-        if (sum > 1f) sum = 0f;
+        if (sum > 5f) sum = 0f;
         sum = (float) Math.Round(sum, 2);
         text.text = "현재 이동 거리 = " + sum.ToString();
     }
