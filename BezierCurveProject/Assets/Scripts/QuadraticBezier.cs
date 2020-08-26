@@ -2,34 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuadraticBezier : MonoBehaviour
+public class QuadraticBezier : BezierCurve
 {
-    public Transform[] Points;
-    public Transform[] QPoints;
-    public Transform BezierPoint;
-    
-    private LineRenderer lineRenderer;
-    private float time = 0f;
-    private float limit = 5f;
-    private float magnification;
-
-    // Start is called before the first frame update
     void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        magnification = 1f / limit;
+        base.Awake();
     }
     
     void FixedUpdate()
     {
-        time += Time.deltaTime;
-        if (time > limit) time = 0f;
-
-        for (int i = 0; i < Points.Length; i++)
-        {
-            lineRenderer.SetPosition(i,Points[i].position);
-        }
-
+        base.FixedUpdate();
         BezierPoint.position = Bezier(time * magnification, Points, QPoints);
     }
 
