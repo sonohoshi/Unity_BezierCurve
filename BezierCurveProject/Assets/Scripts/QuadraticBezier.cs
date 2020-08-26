@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class QuadraticBezier : BezierCurve
 {
-    void Awake()
+    new void Awake()
     {
         base.Awake();
     }
-    
-    void FixedUpdate()
+
+    new void FixedUpdate()
     {
         base.FixedUpdate();
         BezierPoint.position = Bezier(time * magnification, Points, QPoints);
