@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("quad is not null");
+            Destroy(quadratic);
         }
     }
 
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("cubic is not null");
+            Destroy(cubic);
         }
     }
     
