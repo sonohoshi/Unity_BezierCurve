@@ -14,7 +14,7 @@ public class CubicBezier : BezierCurve
     new void FixedUpdate()
     {
         base.FixedUpdate();
-        BezierPoint.position = Bezier(time, Points, QPoints, RPoints);
+        BezierPoint.position = Bezier(time * magnification, Points, QPoints, RPoints);
     }
 
     private Vector3 Bezier(float t, Transform[] points, Transform[] qPoints, Transform[] rPoints)

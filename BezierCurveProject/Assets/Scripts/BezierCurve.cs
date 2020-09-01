@@ -29,4 +29,15 @@ public class BezierCurve : MonoBehaviour
             lineRenderer.SetPosition(i,Points[i].position);
         }
     }
+
+    public void SetLimit(string str)
+    {
+        float i = -1;
+        float t = float.TryParse(str, out i) ? float.Parse(str) : i;
+        if (t > 0)
+        {
+            limit = t;
+            magnification = 1f / limit;
+        }
+    }
 }
