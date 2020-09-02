@@ -35,11 +35,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            /*InputField.onEndEdit.RemoveListener(delegate
-            {
-                quadratic.GetComponent<BezierCurve>().SetLimit(InputField.text);
-            });*/
-            InputField.onEndEdit.RemoveAllListeners();
             Destroy(quadratic);
         }
     }
@@ -62,7 +57,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            InputField.onEndEdit.RemoveAllListeners();
             Destroy(cubic);
         }
     }
