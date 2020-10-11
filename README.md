@@ -1,4 +1,4 @@
-# Unity_BezierCruve
+# Unity_BezierCurve
 
 [현재 참고, 공부하고 있는 블로그의 글](http://kyuniitale.blog.me/40022945907)  
 
